@@ -13,7 +13,7 @@
 	}else if($button == "update"){
 		$kategori_id = $_GET['kategori_id'];
 		
-		mysqli_query ($koneksi, "UPDATE kategori SET kategori_barang='$kategori',
+		mysqli_query ($koneksi, "UPDATE kategori SET kategori='$kategori',
 													 status='$status' WHERE kategori_id='$kategori_id'");
 	}
 	

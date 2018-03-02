@@ -21,7 +21,7 @@
 
 
 	<div class="element-form">
-			<label>kategori barang</label>
+			<label>kategori</label>
 			<span><input type="text" name="kategori" value="<?php echo $kategori; ?>" /></span>
 	</div>
 	

@@ -2,7 +2,7 @@
 
 	$server = "localhost";
 	$username = "root";
-	$password = "1";
+	$password = "";
 	$database = "olshop";
 	
 	$koneksi = mysqli_connect($server, $username, $password, $database) or die("koneksi ke database gagal");

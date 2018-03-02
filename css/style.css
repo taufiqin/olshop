@@ -5,6 +5,7 @@ body{
 	background:#F7F7F7;
 	margin:0px;
 }
+
 #container {
     width: 1100px;
     height: auto;
@@ -217,7 +218,7 @@ container#header#menu #user {
 }
 
 #kiri {
-    width: 245px;
+    width: 200px;
     height: auto;
     float: left;
 }
@@ -235,19 +236,20 @@ container#header#menu #user {
 #menu-kategori ul li a {
     display: block;
     padding: 10px;
-    background: white;
+    background: #dde1e2;
     color: #1e5474;
     text-decoration: none;
 }
 
 #menu-kategori ul li a:hover {
-	background: e8e8e8;
+	background: #e8e8e8;
+    width:200px;
 }
 
 #kanan {
-    width: 840px;
+    width: 800px;
     margin-left: 15px;
-    height: auto;
+    max-height: auto;
     float: left;
 }
 
@@ -260,7 +262,7 @@ container#header#menu #user {
 
 #kanan #barang ul li {
     width: 240px;
-    background: white;
+    background: pink;
     padding: 10px 15px;
     margin-bottom: 15px;
     margin-right: 15px;
@@ -311,10 +313,32 @@ container#header#menu #user {
     text-decoration: none;
     padding: 5px 10px;
     display: inline-block;
-    margin-top: 10px;
+    margin-top: 20px;
     border-radius: 3px;
 }
 
 #kanan #barang ul li .button-add-cart a:hover{
     background:orange;
+}
+#lg{
+    width:50%;
+    margin-left: 5%;
+    background-color: cyan;
+}
+.form-inline .form-control {
+    display: inline-block;
+    width: 80% !important;
+    vertical-align: middle;
+}
+.btn-outline-success  {
+    color: white;
+    background-color: #2E429A !important;
+    background-image: none;
+    border-color: #2E429A !important;
+}
+.btn-outline-success:hover  {
+    color: white;
+    background-color: #2E429A !important;
+    background-image: none;
+    border-color: #2E429A !important;
 }

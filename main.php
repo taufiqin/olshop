@@ -26,8 +26,7 @@
 
 	 <div class="slides">
 		 
-		 masukin slider disini yah nak
-	 
+
 		<?php
 		
 			//$queryBanner = mysqli_query($koneksi, "SELECT * FROM banner WHERE status='on' ORDER BY banner_id DESC LIMIT 3");
