@@ -1,0 +1,17 @@
+.bgc{
+	background-color: silver;
+	width: 100%;
+	height: auto;
+}
+.Logo{
+	width: 200px;
+	height: 50px;
+}
+.Pembayaran{
+	width: 80px;
+	height: 50px;
+}
+.nav-link{
+	color:black;
+	padding: 1px !important;
+}
