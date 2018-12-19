@@ -9,6 +9,7 @@
 	$stok = "";
 	$harga = "";
 	$status = "";
+	$link = "";
 	$keterangan_gambar = "";
 	$button = "Add";
 	
@@ -22,6 +23,7 @@
 		$gambar = $row['gambar'];
 		$harga = $row['harga'];
 		$stok = $row['stok'];
+		$link = $row['link'];
 		$status = $row['status'];
 		$button = "update";
 		
@@ -42,12 +44,12 @@
 			
 				<select name="kategori_id">
 					<?php
-						$query = mysqli_query($koneksi, "SELECT kategori_id, kategori_barang FROM kategori WHERE status='on' ORDER BY kategori_barang ASC");
+						$query = mysqli_query($koneksi, "SELECT kategori_id, kategori FROM kategori WHERE status='on' ORDER BY kategori ASC");
 						while($row=mysqli_fetch_assoc($query)){
 							if($kategori_id == $row['kategori_id']){
-								echo "<option value='$row[kategori_id]' selected 'true'>$row[kategori_barang]</option>";
+								echo "<option value='$row[kategori_id]' selected 'true'>$row[kategori]</option>";
 							}
-							echo "<option value='$row[kategori_id]'>$row[kategori_barang]</option>";
+							echo "<option value='$row[kategori_id]'>$row[kategori]</option>";
 						}
 					?>
 				</select>
@@ -73,6 +75,11 @@
 	<div class="element-form">
 			<label>Harga</label>
 			<span><input type="text" name="harga" value="<?php echo $harga; ?>" /></span>
+	</div>
+
+	<div class="element-form">
+			<label>link</label>
+			<span><input type="text" name="link" value="<?php echo $link; ?>" /></span>
 	</div>
 	
 	<div class="element-form">

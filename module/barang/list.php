@@ -1,10 +1,19 @@
+<div id="psn"><b>BARANG</b></div>
+			<div id="hallo">
+				<center><b>Daftar Barang</b></center>
+				<?php 
+							        echo "Hi , <a href='".BASE_URL. "index.php?page=my_profile&module=pesanan&action=list'><b>$row[nama]</b></a> ";
+							        ?><br>
+					Berikut adalah daftar barang yang ada di Olshop.
+			</div>
+	<hr>
 <div id="frame-tambah">
 	<a href="<?php echo BASE_URL. "index.php?page=my_profile&module=barang&action=form"; ?>" class="tombol-action">+ Tambah Barang </a>
 </div>
 
 <?php
 
-	$query = mysqli_query($koneksi, "SELECT barang.*, kategori.kategori_barang FROM barang JOIN kategori ON barang.kategori_id=kategori.kategori_id ORDER BY nama_barang ASC");
+	$query = mysqli_query($koneksi, "SELECT barang.*, kategori.kategori FROM barang JOIN kategori ON barang.kategori_id=kategori.kategori_id ORDER BY nama_barang ASC");
 	
 	if(mysqli_num_rows($query) == 0) {
 		echo "<h3>saat ini belum ada barang didalam table barang</h3>";
@@ -27,7 +36,7 @@
 				echo "<tr>
 						<td class='kolom-nomor'>$no</td>
 						<td class='kiri'>$row[nama_barang]</td>
-						<td class='kiri'>$row[kategori_barang]</td>
+						<td class='kiri'>$row[kategori]</td>
 						<td class='kiri'>".rupiah($row["harga"])."</td>
 						<td class='tengah'>$row[status]</td>
 						<td class='tengah'>

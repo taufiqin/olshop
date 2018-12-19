@@ -10,7 +10,7 @@
 		$queryKategori = mysqli_query($koneksi, "SELECT * FROM kategori WHERE kategori_id='$kategori_id'");
 		$row = mysqli_fetch_assoc($queryKategori);
 		
-		$kategori = $row['kategori_id'];
+		$kategori = $row['kategori'];
 		$status = $row['status'];
 		$button = "update";
 	}
@@ -21,7 +21,7 @@
 
 
 	<div class="element-form">
-			<label>kategori barang</label>
+			<label>kategori</label>
 			<span><input type="text" name="kategori" value="<?php echo $kategori; ?>" /></span>
 	</div>
 	

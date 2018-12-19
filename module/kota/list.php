@@ -1,3 +1,12 @@
+<div id="psn"><b>KOTA</b></div>
+			<div id="hallo">
+				<center><b>Daftar Kota</b></center>
+				<?php 
+							        echo "Hi , <a href='".BASE_URL. "index.php?page=my_profile&module=pesanan&action=list'><b>$row[nama]</b></a> ";
+							        ?><br>
+					Berikut adalah daftar kota beserta biaya kirim.
+			</div>
+	<hr>
 <div id="frame-tambah">
 	<a class="tombol-action" href="<?php echo BASE_URL."index.php?page=my_profile&module=kota&action=form"; ?>">+ Tambah Kota</a>
 </div>

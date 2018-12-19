@@ -3,6 +3,8 @@
 	include_once("../../function/koneksi.php");
 	include_once("../../function/helper.php");
 	
+	// admin_only("barang", $level);
+	
 	$nama_barang = $_POST['nama_barang'];
 	$kategori_id = $_POST['kategori_id'];
 	$spesifikasi = $_POST['spesifikasi'];
@@ -10,6 +12,7 @@
 	$button = $_POST['button'];
 	$harga = $_POST['harga'];
 	$stok = $_POST['stok'];
+	$link = $_POST['link'];
 	$update_gambar ="";
 	if(!empty($_FILES["file"]["name"])){
 		$nama_file = $_FILES["file"]["name"];
@@ -18,9 +21,13 @@
 		$update_gambar = ", gambar='$nama_file'";
 	}
 	
+
 	if($button == "Add"){
-		mysqli_query($koneksi , "INSERT INTO barang (nama_barang, kategori_id, spesifikasi, gambar, harga, stok, status) 
-											VALUES ('$nama_barang', '$kategori_id', '$spesifikasi', '$nama_file', '$harga', '$stok', '$status')");
+
+		$status = mysqli_query($koneksi , "INSERT INTO barang (nama_barang, kategori_id, spesifikasi, gambar, harga, stok, link, status) 
+											VALUES ('$nama_barang', '$kategori_id', '$spesifikasi', '$nama_file', '$harga', '$stok','$link','$status')");
+		var_dump(mysqli_error($koneksi));
+		exit;
 	}
 	else if($button == "update"){
 		$barang_id = $_GET['barang_id'];
@@ -30,6 +37,7 @@
 													spesifikasi='$spesifikasi',
 													harga='$harga',
 													stok='$stok',
+													link='$link',
 													status='$status' 
 													$update_gambar WHERE barang_id='$barang_id'");
 	}
